@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {FormControl, FormGroup, FormsModule, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-card-form',
@@ -11,7 +11,10 @@ export class CardFormComponent implements OnInit {
     name: new FormControl('', [
       Validators.required,
       Validators.minLength(3)
-    ])
+    ]),
+    cardNumber: new FormControl(''),
+    expiration: new FormControl(''),
+    securityCode: new FormControl('')
   });
 
   constructor() {
@@ -20,4 +23,7 @@ export class CardFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  onSubmit() {
+    console.log('submited');
+  }
 }
