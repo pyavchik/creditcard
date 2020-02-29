@@ -41,7 +41,6 @@ export class CardFormComponent implements OnInit {
   }
 
   onResetClick() {
-    console.log('Reseted');
     this.cardForm.reset();
   }
 }
